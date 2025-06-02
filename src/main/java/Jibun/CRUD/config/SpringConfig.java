@@ -25,7 +25,12 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@ComponentScan("Jibun.CRUD")
+@ComponentScan(basePackages = {
+        "Jibun.CRUD.controllers",
+        "Jibun.CRUD.services",
+        "Jibun.CRUD.dao",
+        "Jibun.CRUD.config"
+})
 @PropertySource("classpath:hibernate.properties")
 @EnableTransactionManagement
 @EnableWebMvc
